@@ -1,0 +1,8 @@
+{
+    "AzureEndpoint" : "ENDPOINT",
+    "AzureKey" : "KEY",
+    "SQLServerAddr" : "localhost",
+    "SQLServerUser" : "root",
+    "SQLServerPass" : "PASS",
+    "CameraName" : "NAME"
+}
