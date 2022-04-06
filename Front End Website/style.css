@@ -1,0 +1,25 @@
+body {
+    background-image: url("https://thewallpaper.co/wp-content/uploads/2020/09/high-quality-images-natural-sky-landscape-cool-backgrounds-windows-wallpaper-download-wallpapers-trees-1810x1283-1.jpg");
+    font-family: 'Lato', sans-serif;
+}
+
+.greeting {
+    color: white;
+}
+.greeting, .white-window{
+    text-align: center;
+}
+
+.white-window {
+    margin: auto;
+    background-color: white;
+    width: 30em;
+    height: 15em;
+    box-shadow: 0 0 3em black;
+    border-radius: 1%;
+}
+
+
+#azure-attribution {
+    padding-top: .5em;
+}
