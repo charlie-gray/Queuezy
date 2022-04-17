@@ -1,3 +1,4 @@
+# Parses Azure response + counts people
 def countPeople(objects):
     personCount = 0
     for object in objects:

@@ -6,8 +6,12 @@ from datetime import datetime
 class SQLConnection:
     def __init__(self, h, u, p, iotName):
         self.iotName = iotName
+
+        # Fancy progress bars (ooh)
         with alive_bar(unknown="dots_waves", title='Connecting to Database', stats=False, elapsed=False, calibrate=5,
                        monitor=False) as bar:
+            
+            # Connect to sql
             self.mydb = mysql.connector.connect(
                 host=h,
                 user=u,
@@ -18,6 +22,8 @@ class SQLConnection:
 
         self.formatDB()
 
+    # Formats SQL database (Creates DB and Table if not exists)
+    # Database: LineCounter, Table: Cameras
     def formatDB(self):
         with alive_bar(title='Formatting Database') as bar:
             self.cursor.execute("CREATE DATABASE IF NOT EXISTS LineCounter")
@@ -42,6 +48,7 @@ class SQLConnection:
                 self.mydb.commit()
             bar()
 
+    # Update camera with new peoplecount
     def updateDB(self, peopleCount):
         self.cursor.execute("UPDATE Cameras SET peopleCount = \'{}\', lastUpdated = \'{}\' WHERE cameraName = \'{}\';".format(peopleCount, datetime.now(), self.iotName))
         self.mydb.commit()

@@ -1,12 +1,9 @@
-# program to capture single image from webcam in python
-
-# importing OpenCV library
 import time
 
 from PIL import ImageDraw, Image
 from cv2 import VideoCapture, imwrite
 
-
+# Captures image from default webcam and saves to filePath
 def captureImage(filePath):
     cam_port = 0
     cam = VideoCapture(cam_port)
@@ -19,11 +16,13 @@ def captureImage(filePath):
         print("ERROR: Unable to capture image from camera")
 
 
-# input detect_objects_results_remote.objects
+# Takes in a detect_objects_results_remote.objects object and overlays bounding boxes over image at imagePath 
+# Returns annotated image
 def drawObjectBoundingBoxes(objects, imagePath):
     im = Image.open(imagePath)
     img1 = ImageDraw.Draw(im)
-
+    
+    # Logs object location + draws bounding boxes/labels over image
     for o in objects:
         print(o.object_property)
         print("object at location {}, {}, {}, {}".format( \

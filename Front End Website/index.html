@@ -8,21 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
-    <title>EXAMPLE LINE NAME</title>
+    <title>Loading...</title>
 </head>
 <body>
     <!-- Greeting -->
     <div class="greeting">
-        <h1>Good Morning</h1>
-    </div>
+        <h1 id="greet-txt">Good Morning</h1>
+    </div> 
     
     <!-- White Window -->
     <div class="white-window">
         <h3 style="padding-top: 4%;">Estimated Wait Time:</h3>
         <hr>
-        <h1>< 1 Minute</h1>
-        <h2>For [CAMERA NAME]</h2>
-        <p id="azure-attribution">Powered by <a href="http://https://azure.microsoft.com/">Microsoft Azure</a></p>
+        <h1 id="time-data">Loading...</h1>
+        <h2 id="camera-label"></h2>
+        <p id="last-updated"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Powered by Microsoft Azure</p>
     </div>
 </body>
 </html>

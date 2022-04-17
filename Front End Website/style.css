@@ -1,25 +1,60 @@
 body {
-    background-image: url("https://thewallpaper.co/wp-content/uploads/2020/09/high-quality-images-natural-sky-landscape-cool-backgrounds-windows-wallpaper-download-wallpapers-trees-1810x1283-1.jpg");
+    background-image: url("bg.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width:100%;
+    min-width: none;
+    height: 100%;
+    max-height: none;
     font-family: 'Lato', sans-serif;
+    text-align: center;
+    display:block;
+    justify-content: center;
 }
 
 .greeting {
     color: white;
-}
-.greeting, .white-window{
-    text-align: center;
+    width: 100%;
 }
 
 .white-window {
-    margin: auto;
+    
     background-color: white;
+
     width: 30em;
     height: 15em;
     box-shadow: 0 0 3em black;
     border-radius: 1%;
+
+}
+
+@media only screen and (max-width: 507px) {
+    .white-window { 
+        width: 80vw;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+}
+
+.greeting, .white-window{
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 
-#azure-attribution {
+#last-updated {
     padding-top: .5em;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
